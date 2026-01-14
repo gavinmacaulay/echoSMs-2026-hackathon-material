@@ -98,7 +98,7 @@ A notebook that demonstrates using the Python jsonschema-rs package to validate 
 
 This is the RESTful web API. The current access methods are an initial attempt and should fit many (but not all) uses. Feedback on the usability of the access methods is welcome.
 
-Switch to the 'XXXX' notebook to demonstrate the web API.
+Open the `simple echoSMs datastore demo.ipynb` for a demonstration of the web API.
 
 NOTE: the specimen and shape data returned by the API is not in the exact same structure as in the TOML files - the datastore flattens the dataset/specimen structure to make it simplier to use the data.
 
