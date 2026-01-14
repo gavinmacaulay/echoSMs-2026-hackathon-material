@@ -92,13 +92,13 @@ Some R validation libraries are:
 - [jsonvalidate](https://cran.r-project.org/web/packages/jsonvalidate/vignettes/jsonvalidate.html)
 - [rjsoncons](https://cran.r-project.org/web/packages/rjsoncons/index.html)
 
-A notebook that demonstrates using the Python jsonschema-rs package to validate a TOML file is available here XXXX.
+The `validating a TOML datastore file.ipynb` notebook demonstrates how to use the Python jsonschema-rs package to validate a TOML file.
 
 ### Retrieving datastore data
 
 This is the RESTful web API. The current access methods are an initial attempt and should fit many (but not all) uses. Feedback on the usability of the access methods is welcome.
 
-Open the `simple echoSMs datastore demo.ipynb` for a demonstration of the web API.
+Open the `simple echoSMs datastore demo.ipynb` notebook for a demonstration of the web API.
 
 NOTE: the specimen and shape data returned by the API is not in the exact same structure as in the TOML files - the datastore flattens the dataset/specimen structure to make it simplier to use the data.
 
@@ -133,11 +133,11 @@ Some suggestions for things to try:
 1. Use the web API and give feedback
 
 
-We have provided example files on your linux server to help with the above:
+We have provided example files and code on your linux server to help with the above:
 
-- Example shape data (XXX directory)
-- TOML file template
-- Example code (YYY directory) to:
-  - Read shape data, add metadata, validate, and write to TOML format (XXX.py)
-  - Retrieve shape data and use in a scattering model (XXXX.py)
+- Example shape data (in the `shapes` directory)
+- TOML shape file template (in the `shapes` directory)
+- Example code (in the `code` directory) to:
+  - Read shape data, add metadata, validate, and write to TOML format (`demo - create a TOML file`.py)
+  - Retrieve shape data and use in a scattering model (`demo - web API to TS.py`)
 
