@@ -118,8 +118,6 @@ Access to this computer is entirely via your web browser - access is via https:/
   - `cd /data_store_testing`
   - `fastapi dev`
 
-There are sample shape data files and Python scripts in 'YYY'.
-
 The hackathon servers will remain there until after the April 2026 WGFAST meeting.
 
 ## Suggested work items
@@ -132,12 +130,11 @@ Some suggestions for things to try:
 1. Populate the metadata and give feedback
 1. Use the web API and give feedback
 
+We have provided example files and code on your linux server to help with the above. These are in sub-directories of the `echoSMs-2026-hackathon-material` directory on your linux server.
 
-We have provided example files and code on your linux server to help with the above:
-
-- Example shape data (in the `shapes` directory)
-- TOML shape file template (in the `shapes` directory)
-- Example code (in the `code` directory) to:
-  - Read shape data, add metadata, validate, and write to TOML format (`demo - create a TOML file`.py)
+- Example shape data (in the `shapes` subdirectory)
+- TOML shape file template (in the `shapes` subdirectory)
+- Example code (in the `code` subdirectory) to:
+  - Read shape data, add metadata, validate, and write to TOML format (`demo - create a TOML file.py`)
   - Retrieve shape data and use in a scattering model (`demo - web API to TS.py`)
 
