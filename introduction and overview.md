@@ -1,6 +1,3 @@
-This is a working draft.
-
-
 # Introduction
 
 The echoSMs project is developing an online database for scattering model shapes and associated metadata. The purpose of this is to facilitate long-term
@@ -59,7 +56,7 @@ The shape format has been designed with these attributes in mind:
 - everything in text files,
 - general enough to store all types of shapes used in scattering models.
 
-The schema structure is one of the main things we would like feedback on - it defines how the data are structured, what data are mandatory, their format, etc. Mike has been testing an alternative structure (schema available [here](https://github.com/ices-tools-dev/echoSMs/issues/35)). We've very interested in what is missing, what is onerous to provide, unnecessary, and improved ways of structuring the data.
+The schema structure is one of the main things we would like feedback on - it defines how the data are structured, what data are mandatory, their format, etc. Mike has been testing an alternative structure (schema available [here](https://github.com/ices-tools-dev/echoSMs/issues/35)). We are very interested in what you think is missing, what is onerous to provide or unnecessary, and any changes or improvements to the data structure.
 
 Schema links:
 
@@ -106,17 +103,19 @@ NOTE: the specimen and shape data returned by the API is not in the exact same s
 
 To reduce setup time we provide everyone with access to individual online Linux computers with pre-configured software and resources. You're welcome to work on your local computer if you want to but we won't have much time to help with configuration problems (the workshop files are available [here](https://github.com/gavinmacaulay/echoSMs-2026-hackathon-material), the web API code [here](https://github.com/gavinmacaulay/data_store_testing.git), and the web API setup script is [here](https://github.com/nmfs-opensci/container-images/blob/main/images/acoustics/Dockerfile) on lines 16-21).
 
-Access to this computer is entirely via your web browser - access is via https://workshop.nmfs-openscapes.2i2c.cloud/hub/login. The password is `XXXX`.
+Access to this computer is entirely via your web browser:
 
+- Click this [link](https://workshop.nmfs-openscapes.2i2c.cloud/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2Fgavinmacaulay%2FechoSMs-2026-hackathon-material&urlpath=lab%2Ftree%2FechoSMs-2026-hackathon-material%2Fintroduction%20and%20overview.md&branch=main) to start your server and download/update the hackathon files to your online computer. The password is `XXXX`.
 - Choose the `Py-R - echoSMs hackathon - latest` image
 - The default resource allocation is fine
 - Click on `Start`
 - You'll end up in a Jupyterlab instance in your web browser - it can take a few minutes to get there
-- Click on this [link](https://workshop.nmfs-openscapes.2i2c.cloud/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2Fgavinmacaulay%2FechoSMs-2026-hackathon-material&urlpath=lab%2Ftree%2FechoSMs-2026-hackathon-material%2Fintroduction%20and%20overview.md&branch=main) to download the hackathon files to your online computer
 - Right click on the file that the link opened and choose `Show Markdown Preview`
 - Open a Terminal (click on the new tab icon: `+`) and type these lines to start your own datastore web API:
   - `cd /data_store_testing`
   - `fastapi dev`
+
+You can also access the server at https://workshop.nmfs-openscapes.2i2c.cloud/hub/login without the hackathon files being downloaded or updated.
 
 The hackathon servers will remain there until after the April 2026 WGFAST meeting.
 
@@ -130,11 +129,13 @@ Some suggestions for things to try:
 1. Populate the metadata and give feedback
 1. Use the web API and give feedback
 
-We have provided example files and code on your linux server to help with the above. These are in sub-directories of the `echoSMs-2026-hackathon-material` directory on your linux server.
+We have provided example files and demo notebooks code on your linux server to help with the
+above. These are in sub-directories of the `echoSMs-2026-hackathon-material` directory
+on your linux server.
 
 - Example shape data (in the `shapes` subdirectory)
 - TOML shape file template (in the `shapes` subdirectory)
-- Example code (in the `code` subdirectory) to:
-  - Read shape data, add metadata, validate, and write to TOML format (`demo - create a TOML file.py`)
-  - Retrieve shape data and use in a scattering model (`demo - web API to TS.py`)
+- Example code (in the `notebooks` subdirectory) to:
+  - Read shape data, add metadata, validate, and write to TOML format (`create a TOML file.py`)
+  - Retrieve shape data and use in a scattering model (`web API to TS demo.ipynb`)
 
