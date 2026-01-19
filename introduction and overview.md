@@ -73,9 +73,20 @@ Schema links:
 - The direct URL can be used in some online JSON schema viewers (e.g., [json-schema](https://json-schema.app/start) and [jsoncrack](https://jsoncrack.com/editor)) and validators (see below)
 - A more readable version of the schema is in the echoSMs [documentation](https://ices-tools-dev.github.io/echoSMs/schema/data_store_schema/).
 
-### Preparing datasets for the datastore
+### Preparing and loading datasets to the datastore
 
 In the prototype datastore, datasets are formatted as per the schema and then arranged in a set of directories. This is explained [here](https://ices-tools-dev.github.io/echoSMs/datastore_anatomical/#preparing-datasets-for-the-datastore).
+
+
+_The following is not complete..._
+
+To make these files available to your local web API:
+
+1. Start the web API
+1. Run the script
+1. Fix any TOML files that fail the validation
+1. Copy the datastore files to ...
+1. Test via the web API at http://127.0.0.1:8000
 
 ### Validating data files
 
