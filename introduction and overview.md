@@ -122,7 +122,7 @@ To reduce setup time we provide everyone with access to individual online Linux 
 
 Access to this computer is entirely via your web browser:
 
-- Click this [link](https://workshop.nmfs-openscapes.2i2c.cloud/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2Fgavinmacaulay%2FechoSMs-2026-hackathon-material&urlpath=lab%2Ftree%2FechoSMs-2026-hackathon-material%2Fintroduction%20and%20overview.md&branch=main) to start your server and download/update the hackathon files to your online computer. Your username is `(to come)` and the password is `petrale`
+- Click this [link](https://workshop.nmfs-openscapes.2i2c.cloud/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2Fgavinmacaulay%2FechoSMs-2026-hackathon-material&urlpath=lab%2Ftree%2FechoSMs-2026-hackathon-material%2Fintroduction%20and%20overview.md&branch=main) to start your server and download/update the hackathon files to your online computer.
 - Choose the `Py-R - echoSMs hackathon - latest` image
 - The default resource allocation is fine
 - Click on `Start`
