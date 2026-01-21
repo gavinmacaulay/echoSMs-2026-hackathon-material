@@ -65,6 +65,7 @@ z = [-0.0026, -0.00175, 0.0005, 0.0023, 0.0049, 0.0067, 0.0067]
 height = [0.0018, 0.0053, 0.008, 0.0062, 0.0044, 0.0026, 0.0008]
 width = [0.007, 0.0115, 0.0088, 0.007, 0.0053, 0.0035, 0.0008]
 mass_density = [1.24]
+mass_density_units = "kg/m^3"
 sound_speed_compressional = [345]
 sound_speed_compressional_units = "m/s"
 
