@@ -159,8 +159,7 @@ on your linux server.
   - `template_metadata.toml`
 - Example code and demos (in the `notebooks` subdirectory) to:
   - Read shape data, add metadata, validate, and write to TOML format (`create a TOML datastore file.ipynb`)
-  - Load non-echoSMs shape data and convert to echoSMs TOML format (`XXXX.ipynb`)
-  - Validate a TOML file against the schema (`validating a TOML datastore file.ipynb`)
+    - Validate a TOML file against the schema (`validating a TOML datastore file.ipynb`)
   - Retrieve shape data and use in a scattering model (`web API to TS demo.ipynb`)
   - The WGFAST 2025 echoSMs workshop demo (`echoSMs 2025 workshop demo.ipynb`)
   - The echoSMs 2025 WGFAST presentation demo (`echoSMs WGFAST 2025 demo.ipynb`)
