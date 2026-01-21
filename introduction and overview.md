@@ -154,7 +154,7 @@ on your linux server.
 
 - Example shape data (in the `shapes` subdirectory):
   - A dataset with 4 specimens (`example_metadata.toml`)
-  - Shape data not in the echoSMs format (`cod_B.txt` and `cod_C.txt`)
+  - Shape data not in the echoSMs format (`cod_B.txt` and `cod_C.txt`, and `shared-public/Jech/aherr001.dat`
 - TOML shape file template (in the `shapes` subdirectory)
   - `template_metadata.toml`
 - Example code and demos (in the `notebooks` subdirectory) to:
