@@ -36,6 +36,28 @@ Ask questions, provide feedback, and discuss at any time.
 - Input data to the datastore are TOML-formatted files containing data and metadata in a form specified by a JSON schema + unrestricted other files (e.g., raw images)
 - The TOML files are validated against a schema before the datastore will accept them
 
+## Your hackathon computer
+
+To reduce setup time we provide everyone with access to individual online Linux computers with pre-configured software and resources. You're welcome to work on your local computer if you want to but we won't have much time to help with configuration problems (the workshop files are available [here](https://github.com/gavinmacaulay/echoSMs-2026-hackathon-material), the web API code [here](https://github.com/gavinmacaulay/data_store_testing.git), and the web API setup script is [here](https://github.com/nmfs-opensci/container-images/blob/main/images/acoustics/Dockerfile) on lines 16-21).
+
+Access to this computer is entirely via your web browser:
+
+- Click this [link](https://workshop.nmfs-openscapes.2i2c.cloud/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2Fgavinmacaulay%2FechoSMs-2026-hackathon-material&urlpath=lab%2Ftree%2FechoSMs-2026-hackathon-material%2Fintroduction%20and%20overview.md&branch=main) to start your server and download/update the hackathon files to your online computer.
+- Choose the `Py-R - echoSMs hackathon - latest` image
+- The default resource allocation is fine
+- Click on `Start`
+- You'll end up in a Jupyterlab instance in your web browser - it can take a few minutes to get there
+- Right click on the file that the link opened and choose `Show Markdown Preview`
+- Open a Terminal (click on the new tab icon: `+`) and type these lines to start your own datastore web API:
+  - `cd /data_store_testing`
+  - `fastapi dev`
+
+You can also access the server at https://workshop.nmfs-openscapes.2i2c.cloud/hub/login without the hackathon files being downloaded or updated.
+
+All servers have access to the same `/home/jovyan/shared-public` directory - use this to share files, etc.
+
+The hackathon servers will remain there until after the April 2026 WGFAST meeting, but your local files and those on `/home/jovyan/shared-public` may not be. Download what you want to keep!
+
 ### Schema overview
 
 The schema:
@@ -47,13 +69,12 @@ The schema:
 
 The data format has been designed to be:
 
-- easy to understand,
-- stored as text only in TOML files,
+- easy to understand text files,
 - general enough to store all types of shapes used in scattering models.
 
 **We want feedback on the schema.** We are especially interested in what you think is missing, what is onerous to provide or unnecessary, and any changes or improvements to the schema.
 
-#### Data structure concepts
+#### Data format concepts
 
 - A **dataset** contains data about one or more **specimens** of the same species
 - Each **specimen** contains one or more **shapes**, representing parts of the specimen (e.g., body, swimbladder, backbone, etc)
@@ -63,7 +84,7 @@ The data format has been designed to be:
   - **voxels** - 3D grid of density and sound speed values
   - **categorised voxels** - 3D grid of categorised material properties
 
-Each shape type has relevant data attributes for storing the shape (documentation [here](https://ices-tools-dev.github.io/echoSMs/datastore_anatomical/#shapes)). Unit and coordinate systems are also at that link.
+Each shape type has relevant data attributes for storing the shape (documentation [here](https://ices-tools-dev.github.io/echoSMs/datastore_anatomical/#shapes)). Unit and coordinate systems are the same as in [echoSMs](https://ices-tools-dev.github.io/echoSMs/conventions/).
 
 Schema links:
 
@@ -73,20 +94,9 @@ Schema links:
 - The direct URL can be used in some online JSON schema viewers (e.g., [json-schema](https://json-schema.app/start) and [jsoncrack](https://jsoncrack.com/editor)) and validators (see below)
 - A more readable version of the schema is in the echoSMs [documentation](https://ices-tools-dev.github.io/echoSMs/schema/data_store_schema/).
 
-### Preparing and loading datasets to the datastore
+### Preparing datasets for the datastore
 
 In the prototype datastore, datasets are formatted as per the schema and then arranged in a set of directories. This is explained [here](https://ices-tools-dev.github.io/echoSMs/datastore_anatomical/#preparing-datasets-for-the-datastore).
-
-
-_The following is not complete..._
-
-To make these files available to your local web API:
-
-1. Start the web API
-1. Run the script
-1. Fix any TOML files that fail the validation
-1. Copy the datastore files to ...
-1. Test via the web API at http://127.0.0.1:8000
 
 ### Validating data files
 
@@ -116,28 +126,6 @@ Open the `simple echoSMs datastore demo.ipynb` notebook for a demonstration of t
 
 NOTE: the specimen and shape data returned by the API is not in the exact same structure as in the TOML files - the datastore flattens the dataset/specimen structure to make it simplier to search and use the data.
 
-## Your hackathon computer
-
-To reduce setup time we provide everyone with access to individual online Linux computers with pre-configured software and resources. You're welcome to work on your local computer if you want to but we won't have much time to help with configuration problems (the workshop files are available [here](https://github.com/gavinmacaulay/echoSMs-2026-hackathon-material), the web API code [here](https://github.com/gavinmacaulay/data_store_testing.git), and the web API setup script is [here](https://github.com/nmfs-opensci/container-images/blob/main/images/acoustics/Dockerfile) on lines 16-21).
-
-Access to this computer is entirely via your web browser:
-
-- Click this [link](https://workshop.nmfs-openscapes.2i2c.cloud/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2Fgavinmacaulay%2FechoSMs-2026-hackathon-material&urlpath=lab%2Ftree%2FechoSMs-2026-hackathon-material%2Fintroduction%20and%20overview.md&branch=main) to start your server and download/update the hackathon files to your online computer.
-- Choose the `Py-R - echoSMs hackathon - latest` image
-- The default resource allocation is fine
-- Click on `Start`
-- You'll end up in a Jupyterlab instance in your web browser - it can take a few minutes to get there
-- Right click on the file that the link opened and choose `Show Markdown Preview`
-- Open a Terminal (click on the new tab icon: `+`) and type these lines to start your own datastore web API:
-  - `cd /data_store_testing`
-  - `fastapi dev`
-
-You can also access the server at https://workshop.nmfs-openscapes.2i2c.cloud/hub/login without the hackathon files being downloaded or updated.
-
-All servers have access to the same `/home/jovyan/shared-public` directory - use this to share files, etc.
-
-The hackathon servers will remain there until after the April 2026 WGFAST meeting, but your local files and those on `/home/jovyan/shared-public` may not be. Download what you want to keep!
-
 ## Suggested work items
 
 Some suggestions for things to try (we don't expect you to do all of these, nor in this order):
@@ -145,11 +133,11 @@ Some suggestions for things to try (we don't expect you to do all of these, nor 
 1. Convert your shape data (or ones we provide) into the echoSMs coordinate and unit systems
 1. Generate TOML files that are suitable for loading to the web API
 1. Retrieve shape data from the web API and use in a scattering model
-1. Populate the metadata and give feedback
+1. Populate the schema metadata and give feedback
 1. Use the web API and give feedback
 
-We have provided example files and demo notebooks code on your linux server to help with the
-above. These are in sub-directories of the `echoSMs-2026-hackathon-material` directory
+We have provided example files and demo notebooks code on your hackathon computer to help with the
+above. These are mostly in sub-directories of the `echoSMs-2026-hackathon-material` directory
 on your linux server.
 
 - Example shape data (in the `shapes` subdirectory):
