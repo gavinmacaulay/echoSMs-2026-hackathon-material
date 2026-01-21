@@ -154,10 +154,12 @@ on your linux server.
 
 - Example shape data (in the `shapes` subdirectory):
   - A dataset with 4 specimens (`example_metadata.toml`)
+  - Shape data not in the echoSMs format (`XXXX.txt`)
 - TOML shape file template (in the `shapes` subdirectory)
   - `template_metadata.toml`
 - Example code and demos (in the `notebooks` subdirectory) to:
   - Read shape data, add metadata, validate, and write to TOML format (`create a TOML datastore file.ipynb`)
+  - Load non-echoSMs shape data and convert to echoSMs TOML format (`XXXX.ipynb`)
   - Validate a TOML file against the schema (`validating a TOML datastore file.ipynb`)
   - Retrieve shape data and use in a scattering model (`web API to TS demo.ipynb`)
   - The WGFAST 2025 echoSMs workshop demo (`echoSMs 2025 workshop demo.ipynb`)
