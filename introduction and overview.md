@@ -151,3 +151,14 @@ on your linux server.
   - Retrieve shape data and use in a scattering model (`web API to TS demo.ipynb`)
   - The WGFAST 2025 echoSMs workshop demo (`echoSMs 2025 workshop demo.ipynb`)
   - The echoSMs 2025 WGFAST presentation demo (`echoSMs WGFAST 2025 demo.ipynb`)
+
+## Items discussed in hackathon # 1
+
+|Item|Notes|
+|----|-----|
+|Version control of datasets, shapes, and metadata|To cope with changes to a dataset and creating a permament reference to a dataset even when it changes|
+|Require specific units or user selected?|No concensus from hackathon #1|
+|[RO-Crate](https://www.researchobject.org/ro-crate/) or similar as a way to bundle the raw data|Is basically a set of files/directories with added metadata|
+|Require metadata about measurement precision|E.g., length rounding, weight scale accuracy|
+|Size/length normalised shapes|Niche application, but simple to support|
+|What level of processing step detail to store in the metadata||
